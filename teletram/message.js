@@ -2,11 +2,11 @@ const { isUrl } = require("./utils");
 const onmesage = (tgbot) => {
   // 监听消息
   tgbot.on("message", async (msg) => {
-    // console.log('msg: ', msg);
     // 会话id
     const chatId = msg.chat.id;
     // 会话消息
     const chatText = msg.text;
+    console.log('chatText: ', chatText);
     // console.log("chatId: ", chatId);
     // console.log("chatText: ", chatText);
 

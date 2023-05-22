@@ -10,6 +10,33 @@
 - 建立一个tg机器人
 - 将此机器拉到群组设置管理员即可
 
+## :rocket: PM2部署
+- https://pm2.keymetrics.io/
+```
+config.js中配置telegram机器人token
+$ npm install
+$ npm install -g pm2
+$ 在项目根目录下执行 npm run pm2 或者 pm2 start pm2.json
+```
+
+- 创建开机自启动
+```
+pm2 startup
+```
+
+- 停止服务
+```
+pm2 stop all               //停止所有应用
+pm2 stop [AppName]        //根据应用名停止指定应用
+```
+
+- 日志查看
+```
+pm2 logs            //查看所有应用日志
+pm2 logs [Name]    //根据指定应用名查看应用日志
+pm2 logs [ID]      //根据指定应用ID查看应用日志
+```
+
 ## :art: 项目结构
 Koa2+MongoDB+JWT -- Restful API
 ```
@@ -31,29 +58,3 @@ $ npm run dev
 ```
 
 
-## :rocket: PM2部署
-- https://pm2.keymetrics.io/
-```
-config.js中配置telegram机器人token
-$ npm install
-$ npm install -g pm2
-$ npm run pm2 or pm2 start pm2.json
-```
-
-- 创建开机自启动
-```
-pm2 startup
-```
-
-- 停止服务
-```
-pm2 stop all               //停止所有应用
-pm2 stop [AppName]        //根据应用名停止指定应用
-```
-
-- 日志查看
-```
-pm2 logs            //查看所有应用日志
-pm2 logs [Name]    //根据指定应用名查看应用日志
-pm2 logs [ID]      //根据指定应用ID查看应用日志
-```
